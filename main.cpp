@@ -104,5 +104,6 @@ void notcrashy()
 int main() {   
     notcrashy(); // this succeeds
     crashy(); // this has a sigsegv on my Darwin macOS Mojave system with compiler: AppleClang 11.0.0.11000033
+              // also crashes on Linux G++ 8.3.0.  I actually couldn't find a system it *doesn't* crash on!
     return EXIT_SUCCESS;
 }
