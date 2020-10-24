@@ -108,7 +108,7 @@ void crashy2()
         results.emplace_back();
         auto & [name, parsed] = results.back();
         name = f; // assign
-        simdjson::dom::parser parser; // it appears simdjson doesn't like this object to be re-used
+        simdjson::dom::parser parser;
         auto error = parser.parse(buf).get(parsed);
         if (error) throw std::runtime_error(std::string{"Failed to parse "} + std::string{f});
     }
